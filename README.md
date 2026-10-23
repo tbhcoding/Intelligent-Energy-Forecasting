@@ -21,7 +21,7 @@ Due to GitHub’s file size limits, the dataset is not included in this reposito
 
 **To use this project:**
 1. Download the dataset from the UCI repository.  
-2. Place the raw file inside a `data/` directory at the project root.  
+2. Extract `household_power_consumption.txt` into the project root, next to the notebook (the file is gitignored).  
 
 ---
 
@@ -52,6 +52,8 @@ Due to GitHub’s file size limits, the dataset is not included in this reposito
 - LSTM showed slightly better performance (12.7% lower MSE), though the statistical difference was not significant.  
 - Visual dashboards demonstrated interpretability, highlighting the potential of neural networks as decision-support tools for households and utilities.  
 
+The full write-up, with methodology and error analysis, is in [`paper.pdf`](paper.pdf).
+
 ---
 
 ## Future Work
@@ -63,7 +65,14 @@ Due to GitHub’s file size limits, the dataset is not included in this reposito
 ---
 
 ## How to Run
-1. Clone the repository:
+1. Clone the repository and install dependencies:
    ```bash
-   git clone https://github.com/your-username/Intelligent-Energy-Forecasting.git
+   git clone https://github.com/tbhcoding/Intelligent-Energy-Forecasting.git
    cd Intelligent-Energy-Forecasting
+   pip install -r requirements.txt
+   ```
+2. Download the dataset as described under **Dataset** above.
+3. Run the notebook:
+   ```bash
+   jupyter notebook energy_forecasting_rnn_lstm.ipynb
+   ```
